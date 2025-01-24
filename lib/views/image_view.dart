@@ -1,4 +1,3 @@
-
 import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
@@ -50,43 +49,47 @@ class _ImageViewState extends State<ImageView> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     _save();
                   },
                   child: Stack(
-                    children: [Container(
-                      width: MediaQuery.of(context).size.width/2,
-                      height: 80,
-                      padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white,width: 1),
-                          borderRadius: BorderRadius.circular(50),
-
-                          gradient: LinearGradient(colors: [Color(0x36FFFFFF),Color(0x0FFFFFFF)])
-                      ),
-
-                    ),
+                    children: [
                       Container(
-
-                        width: MediaQuery.of(context).size.width/2,
+                        width: MediaQuery.of(context).size.width / 2,
                         height: 80,
-                        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white,width: 1),
-                          borderRadius: BorderRadius.circular(50),
-
-                          gradient: LinearGradient(colors: [Color(0x36FFFFFF),Color(0x0FFFFFFF)])
-                        ),
+                            border: Border.all(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(50),
+                            gradient: LinearGradient(colors: [
+                              Color(0x36FFFFFF),
+                              Color(0x0FFFFFFF)
+                            ])),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width / 2,
+                        height: 80,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 1),
+                            borderRadius: BorderRadius.circular(50),
+                            gradient: LinearGradient(colors: [
+                              Color(0x36FFFFFF),
+                              Color(0x0FFFFFFF)
+                            ])),
                         child: Column(
-
                           children: [
                             Text(
                               "Save Wallpaper",
-                              style: TextStyle(color: Colors.white, fontSize: 20),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
                             ),
                             Text(
                               "Image will be saved in gallery",
-                              style: TextStyle(color: Colors.white, fontSize: 10),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 10),
                             ),
                           ],
                         ),
@@ -110,6 +113,7 @@ class _ImageViewState extends State<ImageView> {
       ),
     );
   }
+
   _save() async {
     bool hasPermission = await _askPermission();
     if (!hasPermission) {
@@ -121,7 +125,10 @@ class _ImageViewState extends State<ImageView> {
         widget.imageUrl,
         options: Options(responseType: ResponseType.bytes),
       );
-      final result = await ImageGallerySaver.saveImage(Uint8List.fromList(response.data), quality: 100, name: "wallhub");
+      final result = await ImageGallerySaver.saveImage(
+          Uint8List.fromList(response.data),
+          quality: 100,
+          name: "wallhub");
       if (result['isSuccess']) {
         Navigator.pop(context);
       } else {
@@ -141,4 +148,3 @@ class _ImageViewState extends State<ImageView> {
     return false;
   }
 }
-

@@ -9,6 +9,7 @@ import '../widgets/brand.dart';
 import 'package:http/http.dart' as http;
 
 import '../widgets/wallpapersList.dart';
+
 class Search extends StatefulWidget {
   const Search({super.key, required this.searchQuery});
   final String searchQuery;
@@ -41,7 +42,7 @@ class _SearchState extends State<Search> {
   void initState() {
     // TODO: implement initState
     getSearchWallpapers(widget.searchQuery);
-    searchController.text=widget.searchQuery;
+    searchController.text = widget.searchQuery;
     super.initState();
   }
 
@@ -73,8 +74,8 @@ class _SearchState extends State<Search> {
                           getSearchWallpapers(searchController.text);
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => Search(
-                                searchQuery: searchController.text,
-                              )));
+                                    searchQuery: searchController.text,
+                                  )));
                         },
                         autofocus: false,
                         controller: searchController,
@@ -87,8 +88,8 @@ class _SearchState extends State<Search> {
                           getSearchWallpapers(searchController.text);
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => Search(
-                                searchQuery: searchController.text,
-                              )));
+                                    searchQuery: searchController.text,
+                                  )));
                         },
                         child: Container(child: Icon(Icons.search)))
                   ],
@@ -103,7 +104,6 @@ class _SearchState extends State<Search> {
           ),
         ),
       ),
-
     );
   }
 }

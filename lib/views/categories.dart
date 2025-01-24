@@ -8,6 +8,7 @@ import '../data/key.dart';
 import '../model/wallpapermodel.dart';
 import '../widgets/brand.dart';
 import '../widgets/wallpapersList.dart';
+
 class Categorie extends StatefulWidget {
   final String categoryName;
   const Categorie({super.key, required this.categoryName});
@@ -15,6 +16,7 @@ class Categorie extends StatefulWidget {
   @override
   State<Categorie> createState() => _CategorieState();
 }
+
 class _CategorieState extends State<Categorie> {
   List<WallpaperModel> wallpapers = [];
   getSearchWallpapers(String query) async {
@@ -31,15 +33,17 @@ class _CategorieState extends State<Categorie> {
     });
     setState(() {});
   }
+
   @override
   void initState() {
     // TODO: implement initState
     getSearchWallpapers(widget.categoryName);
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.yellow,
         title: brand(),

@@ -8,7 +8,10 @@ Widget brand() {
       Text(
         "Wall",
         style: TextStyle(
-            color: Colors.orange, fontSize: 35, fontWeight: FontWeight.bold,),
+          color: Colors.orange,
+          fontSize: 35,
+          fontWeight: FontWeight.bold,
+        ),
       ),
       Text(
         "Hub",
