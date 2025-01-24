@@ -120,22 +120,16 @@ class _ImageViewState extends State<ImageView> {
       return;
     }
 
-    try {
-      var response = await Dio().get(
-        widget.imageUrl,
-        options: Options(responseType: ResponseType.bytes),
-      );
-      final result = await ImageGallerySaver.saveImage(
-          Uint8List.fromList(response.data),
-          quality: 100,
-          name: "wallhub");
-      if (result['isSuccess']) {
-        Navigator.pop(context);
-      } else {
-        print("Failed to save the image");
-      }
-    } catch (e) {
-      print("Error saving image: $e");
+    var response = await Dio().get(
+      widget.imageUrl,
+      options: Options(responseType: ResponseType.bytes),
+    );
+    final result = await ImageGallerySaver.saveImage(
+        Uint8List.fromList(response.data),
+        quality: 100,
+        name: "wallhub");
+    if (result['isSuccess'] && mounted) {
+      Navigator.pop(context);
     }
   }
 

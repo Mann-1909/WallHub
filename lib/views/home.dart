@@ -9,7 +9,7 @@ import 'package:wallhub/widgets/brand.dart';
 import 'package:http/http.dart' as http;
 
 import '../data/key.dart';
-import '../widgets/wallpapersList.dart';
+import '../widgets/wallpapers_list.dart';
 import 'categories.dart';
 
 class Home extends StatefulWidget {
@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
                                         searchQuery: searchController.text,
                                       )));
                         },
-                        child: Container(child: Icon(Icons.search)))
+                        child: Icon(Icons.search))
                   ],
                 ),
               ),
@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              WallpaperList(wallpapers, context),
+              wallpaperList(wallpapers, context),
             ],
           ),
         ),

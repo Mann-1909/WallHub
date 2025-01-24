@@ -3,11 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../data/categorydata.dart';
 import '../data/key.dart';
 import '../model/wallpapermodel.dart';
 import '../widgets/brand.dart';
-import '../widgets/wallpapersList.dart';
+import '../widgets/wallpapers_list.dart';
 
 class Categorie extends StatefulWidget {
   final String categoryName;
@@ -58,7 +57,7 @@ class _CategorieState extends State<Categorie> {
               SizedBox(
                 height: 20,
               ),
-              WallpaperList(wallpapers, context),
+              wallpaperList(wallpapers, context),
             ],
           ),
         ),

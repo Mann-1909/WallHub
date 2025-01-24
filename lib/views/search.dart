@@ -2,13 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import '../data/categorydata.dart';
 import '../data/key.dart';
 import '../model/wallpapermodel.dart';
 import '../widgets/brand.dart';
 import 'package:http/http.dart' as http;
 
-import '../widgets/wallpapersList.dart';
+import '../widgets/wallpapers_list.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key, required this.searchQuery});
@@ -28,7 +27,6 @@ class _SearchState extends State<Search> {
           "Authorization": apiKey,
         });
 
-    print("hello");
     Map<String, dynamic> jsonData = jsonDecode(response.body);
     jsonData["photos"].forEach((element) {
       WallpaperModel wallpaperModel;
@@ -91,7 +89,7 @@ class _SearchState extends State<Search> {
                                     searchQuery: searchController.text,
                                   )));
                         },
-                        child: Container(child: Icon(Icons.search)))
+                        child: Icon(Icons.search))
                   ],
                 ),
               ),
@@ -99,7 +97,7 @@ class _SearchState extends State<Search> {
                 height: 20,
               ),
               SizedBox(height: 20),
-              WallpaperList(wallpapers, context),
+              wallpaperList(wallpapers, context),
             ],
           ),
         ),
