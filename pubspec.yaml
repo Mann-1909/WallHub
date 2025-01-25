@@ -42,8 +42,8 @@ dependencies:
 dependency_overrides:
   image_gallery_saver:
     git:
-      url: https://github.com/knottx/image_gallery_saver.git
-      ref: knottx-latest
+      url: https://github.com/Mann-1909/image_gallery_saver.git
+      ref: master
 flutter_launcher_icons:
     android: "launcher_icon"
     ios: true

@@ -236,9 +236,9 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: knottx-latest
-      resolved-ref: "24fd8207a4491c42ed907060bb5bf40c2430131f"
-      url: "https://github.com/knottx/image_gallery_saver.git"
+      ref: master
+      resolved-ref: "998286eec1034a3c0a88b13974e2464320d04b1f"
+      url: "https://github.com/Mann-1909/image_gallery_saver.git"
     source: git
     version: "2.0.3"
   json_annotation:
