@@ -39,6 +39,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   image_gallery_saver: ^2.0.3
   flutter_dotenv: ^5.1.0
+dependency_overrides:
+  image_gallery_saver:
+    git:
+      url: https://github.com/knottx/image_gallery_saver.git
+      ref: knottx-latest
 flutter_launcher_icons:
     android: "launcher_icon"
     ios: true
