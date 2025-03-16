@@ -11,7 +11,7 @@ WallHub is a simple and intuitive wallpaper downloading application built using 
 
 ## Download
 
-You can download the latest release from the [Releases](https://github.com/yourusername/wallhub/releases) section.
+You can download the latest release from the [Releases](https://github.com/Mann-1909/WallHub/releases) section.
 
 ## Installation
 
