@@ -2,7 +2,8 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:image_gallery_saver/image_gallery_saver.dart';
+// import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class ImageView extends StatefulWidget {
@@ -124,7 +125,7 @@ class _ImageViewState extends State<ImageView> {
       widget.imageUrl,
       options: Options(responseType: ResponseType.bytes),
     );
-    final result = await ImageGallerySaver.saveImage(
+    final result = await ImageGallerySaverPlus.saveImage(
         Uint8List.fromList(response.data),
         quality: 100,
         name: "wallhub");
