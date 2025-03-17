@@ -1,16 +1,54 @@
-# wallhub
+# WallHub
 
-A new Flutter project.
+WallHub is a simple and intuitive wallpaper downloading application built using Flutter. It allows users to browse and download high-quality wallpapers effortlessly.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Browse a collection of stunning wallpapers
+- Download wallpapers in high resolution
+- User-friendly interface for seamless navigation
+- Lightweight and fast performance
 
-A few resources to get you started if this is your first Flutter project:
+## Download
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+You can download the latest release from the [Releases](https://github.com/Mann-1909/WallHub/releases) section.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/wallhub.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd wallhub
+   ```
+3. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+4. Run the application:
+   ```sh
+   flutter run
+   ```
+
+## Usage
+
+1. Open the application.
+2. Browse the available wallpapers.
+3. Click on a wallpaper to view details.
+4. Download and set it as your background.
+
+## Technologies Used
+
+- Framework: Flutter
+- Language: Dart
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repository and submit pull requests.
+
+## Contact
+
+For any issues or suggestions, feel free to open an issue on GitHub or reach out via email: saxena.sukuna2005@gmail.com
+
